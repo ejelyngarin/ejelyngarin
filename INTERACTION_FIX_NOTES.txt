@@ -1,0 +1,12 @@
+INTERACTION FIX
+
+Updated interactive behavior for:
+- About Me: dashboard topic cards open the corresponding full content panel.
+- Achievements: dashboard cards open their content; achievement categories open their photo collections; each gallery photo opens the existing enlarged lightbox.
+- Parents: family dashboard card opens all four family portraits and their details; each portrait opens a full-size photo viewer; each letter button opens its complete letter.
+- All dashboard panels close with the close button, clicking the backdrop, or Escape.
+- Photo viewer supports close, previous/next, and Escape.
+
+The main page remains a fixed, non-scrolling dashboard. Only the opened content panel can scroll if its content is taller than the screen, so no information is cut off on smaller screens.
+
+To update: replace the matching project files with these extracted files, then commit and push the changes to the connected GitHub production branch.
