@@ -1,79 +1,94 @@
-/* Reliable dashboard panels for About Me, Achievements, and Parents. */
+/* Dashboard popups: capture-phase click handling keeps every card responsive. */
 (() => {
   'use strict';
+  function initDashboard() {
+    const source = document.querySelector('.dashboard-source');
+    const overlay = document.getElementById('dashboard-overlay');
+    const panel = overlay && overlay.querySelector('.dashboard-panel');
+    const content = document.getElementById('dashboard-panel-content');
+    const title = document.getElementById('dashboard-panel-title');
+    if (!source || !overlay || !panel || !content || !title) return;
 
-  const source = document.querySelector('.dashboard-source');
-  const overlay = document.getElementById('dashboard-overlay');
-  const content = document.getElementById('dashboard-panel-content');
-  const title = document.getElementById('dashboard-panel-title');
-  if (!source || !overlay || !content || !title) return;
+    // Move the dialog to body so no page/container stacking context can cover it.
+    if (overlay.parentElement !== document.body) document.body.appendChild(overlay);
 
-  const page = (location.pathname.split('/').pop() || 'personal.html').toLowerCase();
-  const pageMap = {
-    'personal.html': {
-      story: 0, profile: 1, details: 2, education: 3, personality: 4, interests: 5,
-      labels: ['My story', 'Profile & quick facts', 'Personal details', 'Education', 'Personality & values', 'Interests & hobbies']
-    },
-    'achievements.html': {
-      gallery: 0, academic: 1, leadership: 2, lessons: 3,
-      labels: ['Photo gallery', 'Academic recognition', 'Leadership & participation', 'Lessons beyond awards']
-    },
-    'parents.html': {
-      family: 0, gratitude: 1,
-      labels: ['My family', 'A note of gratitude']
+    const sections = Array.from(source.children).filter(node => node.matches('section'));
+    let active = null;
+    let restoreFocus = null;
+    let restoreParent = null;
+    let restoreNext = null;
+
+    const pageType = document.querySelector('#editorial-gallery') ? 'achievements'
+      : document.querySelector('.family-section') ? 'parents' : 'about';
+    const maps = {
+      about: {
+        story: [0, 'My Story'], profile: [1, 'Profile & Quick Facts'], details: [2, 'Personal Details'],
+        education: [3, 'Education'], personality: [4, 'Personality & Values'], interests: [5, 'Interests & Hobbies']
+      },
+      achievements: {
+        gallery: [0, 'Achievement Gallery'], academic: [1, 'Academic Recognition'],
+        leadership: [2, 'Leadership & Participation'], lessons: [3, 'Lessons Beyond Awards']
+      },
+      parents: { family: [0, 'My Family'], gratitude: [1, 'A Note of Gratitude'] }
+    };
+    const map = maps[pageType];
+
+    function open(key, trigger) {
+      const entry = map[key];
+      if (!entry || !sections[entry[0]]) return;
+      if (active) restoreActive();
+      active = sections[entry[0]];
+      restoreParent = active.parentNode;
+      restoreNext = active.nextSibling;
+      restoreFocus = trigger;
+      title.textContent = entry[1];
+      content.replaceChildren(active);
+      overlay.hidden = false;
+      overlay.removeAttribute('hidden');
+      overlay.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('dashboard-open');
+      document.body.style.overflow = 'hidden';
+      content.scrollTop = 0;
+      const close = overlay.querySelector('.dashboard-close');
+      if (close) close.focus();
     }
-  };
-  const config = pageMap[page];
-  if (!config) return;
 
-  const sections = Array.from(source.children).filter(el => el.tagName === 'SECTION');
-  let activeSection = null;
-  let lastTrigger = null;
+    function restoreActive() {
+      if (!active || !restoreParent) return;
+      if (restoreNext && restoreNext.parentNode === restoreParent) restoreParent.insertBefore(active, restoreNext);
+      else restoreParent.appendChild(active);
+      active = null;
+      restoreParent = null;
+      restoreNext = null;
+    }
 
-  function openPanel(key, trigger) {
-    const index = config[key];
-    if (!Number.isInteger(index) || !sections[index]) return;
+    function close() {
+      if (overlay.hidden) return;
+      restoreActive();
+      content.replaceChildren();
+      overlay.hidden = true;
+      overlay.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('dashboard-open');
+      document.body.style.overflow = '';
+      if (restoreFocus && restoreFocus.isConnected) restoreFocus.focus();
+    }
 
-    if (activeSection) source.appendChild(activeSection);
-    activeSection = sections[index];
-    lastTrigger = trigger || document.activeElement;
-    title.textContent = config.labels[index] || 'Explore';
-    content.replaceChildren(activeSection);
-    overlay.hidden = false;
-    overlay.setAttribute('aria-hidden', 'false');
-    document.body.classList.add('dashboard-open');
-    document.body.style.overflow = 'hidden';
+    // Capture phase means the dashboard opens even if another page script handles clicks.
+    document.addEventListener('click', event => {
+      const trigger = event.target instanceof Element ? event.target.closest('[data-dashboard-open]') : null;
+      if (!trigger) return;
+      const key = trigger.getAttribute('data-dashboard-open');
+      if (!map[key]) return;
+      event.preventDefault();
+      event.stopPropagation();
+      open(key, trigger);
+    }, true);
+
     const closeButton = overlay.querySelector('.dashboard-close');
-    if (closeButton) closeButton.focus();
-    content.scrollTop = 0;
+    if (closeButton) closeButton.addEventListener('click', close);
+    overlay.addEventListener('click', event => { if (event.target === overlay) close(); });
+    document.addEventListener('keydown', event => { if (event.key === 'Escape' && !overlay.hidden) close(); });
   }
-
-  function closePanel() {
-    if (overlay.hidden) return;
-    if (activeSection) source.appendChild(activeSection);
-    activeSection = null;
-    content.replaceChildren();
-    overlay.hidden = true;
-    overlay.setAttribute('aria-hidden', 'true');
-    document.body.classList.remove('dashboard-open');
-    document.body.style.overflow = '';
-    if (lastTrigger && typeof lastTrigger.focus === 'function') lastTrigger.focus();
-  }
-
-  // Delegation remains reliable even when the page content is moved into the panel.
-  document.addEventListener('click', event => {
-    const trigger = event.target.closest('[data-dashboard-open]');
-    if (!trigger) return;
-    event.preventDefault();
-    openPanel(trigger.dataset.dashboardOpen, trigger);
-  });
-
-  const closeButton = overlay.querySelector('.dashboard-close');
-  if (closeButton) closeButton.addEventListener('click', closePanel);
-  overlay.addEventListener('click', event => {
-    if (event.target === overlay) closePanel();
-  });
-  document.addEventListener('keydown', event => {
-    if (event.key === 'Escape' && !overlay.hidden) closePanel();
-  });
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initDashboard, { once: true });
+  else initDashboard();
 })();

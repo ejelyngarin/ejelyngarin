@@ -30,7 +30,7 @@
      .
     </span>
    </a>
-   <button aria-controls="site-nav" aria-expanded="false" aria-label="Toggle navigation" class="menu-toggle">
+   <button type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Toggle navigation" class="menu-toggle">
     <span>
     </span>
     <span>
@@ -65,12 +65,10 @@
       </em>
      </h1>
      <p class="dashboard-intro">
-      Explore the person behind the portfolio. Every topic opens in its own panel—no long page to scroll through.
      </p>
      <p class="dashboard-hint">
       <span class="hint-dot">
       </span>
-      Choose a topic to open its complete content.
      </p>
     </div>
     <div class="dashboard-side-note">
@@ -619,6 +617,12 @@
      </div>
     </div>
    </div>
+  
+    <nav class="page-step-navigation" aria-label="Portfolio page navigation">
+      <a class="page-step-link previous" href="index.html" aria-label="Previous page: Home"><span aria-hidden="true">←</span><span>Previous</span></a>
+      <span class="page-step-center">02 / 04 · MY PORTFOLIO</span>
+      <a class="page-step-link next" href="achievements.html" aria-label="Next page: Achievements"><span>Next</span><span aria-hidden="true">→</span></a>
+    </nav>
   </main>
   <footer class="site-footer">
    <p>
@@ -629,7 +633,6 @@
    </a>
   </footer>
   <script defer src="js/photo-viewer.js"></script>
-  <script defer src="js/dashboard.js">
-  </script>
+  <script defer src="js/dashboard.js"></script>
  </body>
 </html>
