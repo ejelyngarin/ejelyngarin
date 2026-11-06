@@ -1,76 +1,65 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Ejelyn Cudal Garin — personal academic portfolio, story, achievements, family, and future goals.">
-  <meta name="theme-color" content="#173f35">
-  <title>Home | Ejelyn Cudal Garin</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js" defer></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Ejelyn Cudal Garin — personal academic portfolio, story, achievements, family, and future goals." name="description"/>
+<meta content="#173f35" name="theme-color"/>
+<title>Home | Ejelyn Cudal Garin</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&amp;display=swap" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet"/>
+<script defer="" src="js/script.js"></script>
 </head>
 <body class="home-screen">
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <a class="brand" href="index.html" aria-label="Ejelyn home">JEN<span>.</span></a>
-    <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open navigation menu"><span></span><span></span></button>
-    <nav id="site-nav" class="site-nav" aria-label="Main navigation">
-      <a href="index.html" class="active" aria-current="page">Home</a>
-      <a href="personal.html">About Me</a>
-      <a href="achievements.html">Achievements</a>
-      <a href="parents.html">Parents</a>
-    </nav>
-  </header>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<a aria-label="Ejelyn home" class="brand" href="index.html">JEN<span>.</span></a>
+<nav aria-label="Main navigation" class="site-nav" id="site-nav"><a aria-current="page" class="active" data-page="home" href="index.html"><span aria-hidden="true" class="nav-icon">⌂</span><span class="nav-label">HOME</span></a><a data-page="personal" href="personal.html"><span aria-hidden="true" class="nav-icon">●</span><span class="nav-label">ABOUT ME</span></a><a data-page="achievements" href="achievements.html"><span aria-hidden="true" class="nav-icon">★</span><span class="nav-label">ACHIEVEMENTS</span></a><a data-page="parents" href="parents.html"><span aria-hidden="true" class="nav-icon">♧</span><span class="nav-label">PARENTS</span></a></nav>
+</header>
+<main class="home-dashboard" id="main">
+<section aria-labelledby="home-title" class="home-hero">
+<div class="home-copy">
+<p class="eyebrow"><span class="eyebrow-line"></span> PERSONAL PORTFOLIO · 2026</p>
+<h1 id="home-title">Ejelyn Cudal<br/><em>Garin.</em></h1>
+<p class="home-description">A curious learner, an aspiring IT professional, and a work in progress — always finding new ways to learn, grow, and serve.</p>
+<p class="home-motto">“Use Knowledge to Serve.”</p>
+<p class="home-mantra">Still dreaming. <span>Still learning.</span> <b>Still becoming.</b></p>
+</div>
+<div class="home-portrait-wrap">
+<div class="home-portrait-frame">
+<img alt="Portrait of Ejelyn Cudal Garin" onerror="this.style.display='none';this.nextElementSibling.hidden=false" src="images/profile.png"/>
+<div class="home-portrait-fallback" hidden=""><strong>J.</strong><span>Ejelyn Cudal Garin</span></div>
+</div>
+<div class="home-portrait-note"><span>✳</span> Learning to build<br/>a life with purpose.</div>
+<span class="home-vertical-label">STILL LEARNING · STILL BECOMING</span>
+</div>
+</section>
+<section aria-label="Explore the portfolio pages" class="home-navigation">
 
-  <main id="main" class="home-dashboard">
-    <section class="home-hero" aria-labelledby="home-title">
-      <div class="home-copy">
-        <p class="eyebrow"><span class="eyebrow-line"></span> PERSONAL PORTFOLIO · 2026</p>
-        <h1 id="home-title">Ejelyn Cudal<br><em>Garin.</em></h1>
-        <p class="home-description">A curious learner, an aspiring IT professional, and a work in progress — always finding new ways to learn, grow, and serve.</p>
-        <p class="home-motto">“Use Knowledge to Serve.”</p>
-        <p class="home-mantra">Still dreaming. <span>Still learning.</span> <b>Still becoming.</b></p>
-      </div>
-      <div class="home-portrait-wrap">
-        <div class="home-portrait-frame">
-          <img src="images/profile.png" alt="Portrait of Ejelyn Cudal Garin" onerror="this.style.display='none';this.nextElementSibling.hidden=false">
-          <div class="home-portrait-fallback" hidden><strong>J.</strong><span>Ejelyn Cudal Garin</span></div>
-        </div>
-        <div class="home-portrait-note"><span>✳</span> Learning to build<br>a life with purpose.</div>
-        <span class="home-vertical-label">STILL DREAMING · STILL BECOMING</span>
-      </div>
-    </section>
-
-    <section class="home-navigation" aria-label="Explore the four portfolio pages">
-      <a class="home-nav-card home-nav-ivory" href="index.html" aria-current="page">
-        <span class="home-nav-number">01 · START HERE</span><strong>Home</strong><span class="home-nav-desc">A glimpse of my journey</span><span class="home-nav-arrow">↗</span>
-      </a>
-      <a class="home-nav-card home-nav-green" href="personal.html">
-        <span class="home-nav-number">02 · GET TO KNOW ME</span><strong>About Me</strong><span class="home-nav-desc">My story, values &amp; goals</span><span class="home-nav-arrow">↗</span>
-      </a>
-      <a class="home-nav-card home-nav-ivory" href="achievements.html">
-        <span class="home-nav-number">03 · MILESTONES</span><strong>Achievements</strong><span class="home-nav-desc">Recognition &amp; experiences</span><span class="home-nav-arrow">↗</span>
-      </a>
-      <a class="home-nav-card home-nav-green" href="parents.html">
-        <span class="home-nav-number">04 · MY FOUNDATION</span><strong>Parents</strong><span class="home-nav-desc">Family, love &amp; gratitude</span><span class="home-nav-arrow">↗</span>
-      </a>
-    </section>
-
-    <a class="home-looking-ahead" href="personal.html" aria-label="Looking ahead: read about my future goals">
-      <span class="looking-label">LOOKING AHEAD</span>
-      <span class="looking-title">Still learning. <em>Still becoming.</em></span>
-      <span class="looking-copy">Moving forward with curiosity, growth, and purpose.</span>
-      <span class="looking-arrow">EXPLORE MY JOURNEY ↗</span>
-    </a>
-  
-    <nav class="page-step-navigation" aria-label="Portfolio page navigation">
-      <span class="page-step-link disabled" aria-hidden="true">Previous</span>
-      <span class="page-step-center">01 / 04 · MY PORTFOLIO</span>
-      <a class="page-step-link next" href="personal.html" aria-label="Next page: About Me"><span>Next</span><span aria-hidden="true">→</span></a>
-    </nav>
-  </main>
+<a class="home-nav-card home-nav-green" href="personal.html">
+<span class="home-nav-number">01 · GET TO KNOW ME</span><strong>About Me</strong><span class="home-nav-desc">My story, values &amp; goals</span><span class="home-nav-arrow">↗</span>
+</a>
+<a class="home-nav-card home-nav-ivory" href="achievements.html">
+<span class="home-nav-number">02 · MILESTONES</span><strong>Achievements</strong><span class="home-nav-desc">Recognition &amp; experiences</span><span class="home-nav-arrow">↗</span>
+</a>
+<a class="home-nav-card home-nav-green" href="parents.html">
+<span class="home-nav-number">03 · MY FOUNDATION</span><strong>Parents</strong><span class="home-nav-desc">Family, love &amp; gratitude</span><span class="home-nav-arrow">↗</span>
+</a>
+</section>
+<a aria-label="Looking ahead: read about my future goals" class="home-looking-ahead" href="personal.html">
+<span class="looking-label">LOOKING AHEAD</span>
+<span class="looking-title">Still learning. <em>Still becoming.</em></span>
+<span class="looking-copy">Moving forward with curiosity, growth, and purpose.</span>
+<span class="looking-arrow">EXPLORE MY JOURNEY ↗</span>
+</a>
+<nav aria-label="Portfolio page navigation" class="page-step-navigation">
+<span aria-hidden="true" class="page-step-link disabled">Previous</span>
+<span class="page-step-center">01 / 04 · MY PORTFOLIO</span>
+<a aria-label="Next page: About Me" class="page-step-link next" href="personal.html"><span>Next</span><span aria-hidden="true">→</span></a>
+</nav>
+</main>
 </body>
 </html>

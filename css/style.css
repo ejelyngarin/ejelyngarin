@@ -610,3 +610,81 @@ body.home-screen .home-portrait-frame img {
     letter-spacing: .08em;
   }
 }
+
+
+/* Revision: always-visible icon navigation, gold accent, active page state */
+.site-header{position:sticky;top:0;z-index:50;}
+.menu-toggle{display:none!important;}
+.site-nav,
+.site-nav.open{
+  display:flex!important;
+  position:static!important;
+  min-width:0!important;
+  padding:0!important;
+  flex-direction:row!important;
+  align-items:center!important;
+  gap:clamp(8px,1.4vw,20px)!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+.site-nav a{
+  display:inline-flex!important;
+  align-items:center;
+  gap:7px;
+  padding:9px 11px!important;
+  border:1px solid transparent!important;
+  border-bottom:2px solid transparent!important;
+  color:var(--green);
+  text-decoration:none;
+  letter-spacing:.06em;
+  font-size:.72rem;
+  font-weight:700;
+  transition:color .2s,background .2s,border-color .2s,transform .2s;
+}
+.site-nav .nav-icon{
+  color:var(--gold);
+  font-size:1.05rem;
+  line-height:1;
+  width:18px;
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+}
+.site-nav a:hover,
+.site-nav a:focus-visible{
+  color:#8A6D3D;
+  background:rgba(185,154,100,.08);
+  border-color:rgba(185,154,100,.28)!important;
+  border-bottom-color:var(--gold)!important;
+  transform:translateY(-1px);
+  outline:none;
+}
+.site-nav a.active,
+.site-nav a[aria-current="page"]{
+  color:#8A6D3D!important;
+  background:rgba(185,154,100,.11);
+  border-color:rgba(185,154,100,.36)!important;
+  border-bottom-color:var(--gold)!important;
+}
+.site-nav a.active .nav-icon,
+.site-nav a[aria-current="page"] .nav-icon{color:#a98b4e;}
+
+/* Home: three open cards only */
+.home-navigation{grid-template-columns:repeat(3,minmax(0,1fr));}
+.home-vertical-label{right:-3px;top:16px;}
+
+@media(max-width:760px){
+  .site-header{padding-inline:12px!important;}
+  .brand{font-size:1.45rem;}
+  .site-nav,.site-nav.open{gap:3px!important;}
+  .site-nav a{padding:8px 7px!important;font-size:.58rem;gap:4px;}
+  .site-nav .nav-icon{font-size:.88rem;width:14px;}
+}
+@media(max-width:560px){
+  .site-header{align-items:center;gap:5px;}
+  .brand{font-size:1.2rem;}
+  .site-nav a{padding:7px 4px!important;font-size:.47rem;letter-spacing:.02em;gap:2px;}
+  .site-nav .nav-icon{font-size:.72rem;width:11px;}
+  .home-navigation{grid-template-columns:1fr;}
+}
