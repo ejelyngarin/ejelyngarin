@@ -92,3 +92,30 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initDashboard, { once: true });
   else initDashboard();
 })();
+
+/* Page 02 revision: static multi-page controls for Profile and Interests. */
+(() => {
+  function setupPager(rootSelector, pageSelector, prevSelector, nextSelector, countSelector) {
+    const root = document.querySelector(rootSelector);
+    if (!root) return;
+    const pages = Array.from(root.querySelectorAll(pageSelector));
+    let page = 0;
+    const draw = () => {
+      pages.forEach((el,i)=>el.classList.toggle('is-active', i===page));
+      const prev=root.querySelector(prevSelector), next=root.querySelector(nextSelector), count=root.querySelector(countSelector);
+      if(prev) prev.disabled=page===0;
+      if(next) next.disabled=page===pages.length-1;
+      if(count) count.textContent=`Page ${page+1} of ${pages.length}`;
+    };
+    root.addEventListener('click', e=>{
+      if(e.target.closest(prevSelector) && page>0){page--;draw();}
+      if(e.target.closest(nextSelector) && page<pages.length-1){page++;draw();}
+    });
+    draw();
+  }
+  const init=()=>{
+    setupPager('[data-static-pager]','[data-pager-page]','[data-static-prev]','[data-static-next]','[data-static-count]');
+    setupPager('[data-interest-pager]','[data-interest-page]','[data-interest-prev]','[data-interest-next]','[data-interest-count]');
+  };
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init,{once:true}); else init();
+})();

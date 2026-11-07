@@ -31,7 +31,6 @@
      .
     </span>
 </a>
-
 <nav aria-label="Main navigation" class="site-nav" id="site-nav"><a data-page="home" href="index.html"><span aria-hidden="true" class="nav-icon">⌂</span><span class="nav-label">HOME</span></a><a aria-current="page" class="active" data-page="personal" href="personal.html"><span aria-hidden="true" class="nav-icon">●</span><span class="nav-label">ABOUT ME</span></a><a data-page="achievements" href="achievements.html"><span aria-hidden="true" class="nav-icon">★</span><span class="nav-label">ACHIEVEMENTS</span></a><a data-page="parents" href="parents.html"><span aria-hidden="true" class="nav-icon">♧</span><span class="nav-label">PARENTS</span></a></nav>
 </header>
 <main id="main">
@@ -48,9 +47,10 @@
       </em>
 </h1>
 <p class="dashboard-intro">
-      Explore the person behind the portfolio.
-     </p>
+            </p>
 <p class="dashboard-hint">
+<span class="hint-dot">
+</span>
      </p>
 </div>
 <div class="dashboard-side-note">
@@ -76,7 +76,6 @@
       Past, present, and what comes next.
      </span>
 <span class="dashboard-card-action">
-</span>
 </button>
 <button class="dashboard-card" data-dashboard-open="profile" type="button">
 <span class="dashboard-card-number">
@@ -89,7 +88,6 @@
       The student, the program, and the purpose.
      </span>
 <span class="dashboard-card-action">
-</span>
 </button>
 <button class="dashboard-card" data-dashboard-open="details" type="button">
 <span class="dashboard-card-number">
@@ -114,7 +112,6 @@
       The schools and chapters that shaped my path.
      </span>
 <span class="dashboard-card-action">
-</span>
 </button>
 <button class="dashboard-card" data-dashboard-open="personality" type="button">
 <span class="dashboard-card-number">
@@ -126,7 +123,7 @@
 <span class="dashboard-card-desc">
       The principles and perspective I carry.
      </span>
-<sp></sp>
+<span class="dashboard-card-action">
 </button>
 <button class="dashboard-card" data-dashboard-open="interests" type="button">
 <span class="dashboard-card-number">
@@ -139,7 +136,6 @@
       What I enjoy learning, reading, and exploring.
      </span>
 <span class="dashboard-card-action">
-</span>
 </button>
 </section>
 <div aria-hidden="true" class="dashboard-source" hidden="">
@@ -204,70 +200,12 @@
 <p class="eyebrow">
        PERSONAL PROFILE
       </p>
-<h2>
-       Learning with
-       <br/>
-<em>
-        intention.
-       </em>
-</h2>
+
 </div>
-<div class="about-profile-grid">
-<button class="about-profile-card" data-about="profile" type="button">
-<span class="about-card-kicker">
-        A LITTLE ABOUT ME
-       </span>
-<strong>
-        I am a BS Information Technology student at the University of the Cordilleras, majoring in Networking and Security.
-       </strong>
-<span>
-        I enjoy writing, reading, and exploring how technology can be used thoughtfully.
-       </span>
-<span class="about-card-link">
-        READ MY PROFILE ↗
-       </span>
-</button>
-<button class="about-quickfacts" data-about="quickfacts" type="button">
-<span class="about-card-kicker">
-        QUICK FACTS
-       </span>
-<span class="quickfact-line">
-<b>
-         Program
-        </b>
-<span>
-         BS Information Technology
-        </span>
-</span>
-<span class="quickfact-line">
-<b>
-         Major
-        </b>
-<span>
-         Networking and Security
-        </span>
-</span>
-<span class="quickfact-line">
-<b>
-         Institution
-        </b>
-<span>
-         University of the Cordilleras
-        </span>
-</span>
-<span class="quickfact-line">
-<b>
-         Motto
-        </b>
-<span>
-         Use knowledge to serve.
-        </span>
-</span>
-<span class="about-card-link">
-        EXPLORE QUICK FACTS ↗
-       </span>
-</button>
-</div>
+<div class="about-profile-pager" data-static-pager="">
+<div class="about-pager-page is-active" data-pager-page="0"><div class="about-static-profile"><span class="about-card-kicker">PERSONAL PROFILE</span><p>I am a Bachelor of Science in Information Technology student at the University of the Cordilleras in Baguio City, majoring in Networking and Security.</p><p>My interests include understanding how digital systems communicate, how security threats affect people and organizations, and how technology can be used thoughtfully. I also enjoy writing and reading, which help me reflect, communicate, and explore different perspectives.</p><p>I see learning as a process of asking better questions, practicing consistently, learning from mistakes, and becoming more responsible with the knowledge I gain.</p></div></div>
+<div class="about-pager-page" data-pager-page="1"><div class="about-static-facts plain-facts"><p><strong>PROGRAM</strong><span>BS Information Technology</span></p><p><strong>MAJOR</strong><span>Networking and Security</span></p><p><strong>INSTITUTION</strong><span>University of the Cordilleras</span></p><p><strong>CURRENT CHAPTER</strong><span>College · 2026–present</span></p><p><strong>INTERESTS</strong><span>Cybersecurity, networking, writing, reading, and web development</span></p><p><strong>PERSONAL MOTTO</strong><span>Use knowledge to serve.</span></p></div></div>
+<div class="page-controls static-page-controls"><button class="page-btn" data-static-prev="" disabled="" type="button">← Previous</button><span data-static-count="">Page 1 of 2</span><button class="page-btn" data-static-next="" type="button">Next →</button></div></div>
 </section>
 <section class="section about-details-section searchable">
 <p class="eyebrow">
@@ -281,38 +219,38 @@
       </em>
 </h2>
 <div class="about-detail-grid">
-<button class="about-detail-card" data-about="name" type="button">
+<div class="about-detail-card about-detail-static">
 <span>
         FULL NAME
        </span>
 <strong>
         Ejelyn C. Garin
        </strong>
-</button>
-<button class="about-detail-card" data-about="birthday" type="button">
+</div>
+<div class="about-detail-card about-detail-static">
 <span>
         BIRTHDAY
        </span>
 <strong>
         March 10, 2007
        </strong>
-</button>
-<button class="about-detail-card" data-about="location" type="button">
+</div>
+<div class="about-detail-card about-detail-static">
 <span>
         LOCATION
        </span>
 <strong>
         Pangasinan, Philippines
        </strong>
-</button>
-<a class="about-detail-card" href="mailto:ejelyngarin.uc@gmail.com">
+</div>
+<div class="about-detail-card about-detail-static">
 <span>
         EMAIL
        </span>
 <strong>
         ejelyngarin.uc@gmail.com ↗
        </strong>
-</a>
+</div>
 </div>
 </section>
 <section class="section about-education-section searchable" id="education">
@@ -353,18 +291,7 @@
 <p class="eyebrow">
       HOBBIES &amp; INTELLECTUAL CURIOSITY
      </p>
-<h2>
-      Things I love to
-      <br/>
-<em>
-       explore.
-      </em>
-</h2>
-<p class="lead">
-      Choose a card to explore a little more about my interests.
-     </p>
-<div class="interest-grid">
-<a aria-label="Open my Substack articles" class="interest-card" href="https://substack.com/@jenpreferstoyou/posts" rel="noopener noreferrer" target="_blank">
+<div class="interest-pager" data-interest-pager=""><div class="interest-grid interest-page is-active" data-interest-page="0"><a aria-label="Open my Substack articles" class="interest-card" href="https://substack.com/@jenpreferstoyou/posts" rel="noopener noreferrer" target="_blank">
 <span aria-hidden="true" class="interest-icon">
         ✍
        </span>
@@ -377,8 +304,7 @@
          Read my articles ↗
         </span>
 </p>
-</a>
-<button class="interest-card" data-modal="reading">
+</a><button class="interest-card" data-modal="reading">
 <span class="interest-icon">
         📚
        </span>
@@ -391,8 +317,7 @@
 <span class="interest-action">
         Explore my reading interests ↗
        </span>
-</button>
-<button class="interest-card" data-modal="watching">
+</button></div><div class="interest-grid interest-page" data-interest-page="1"><button class="interest-card" data-modal="watching">
 <span class="interest-icon">
         🎬
        </span>
@@ -405,8 +330,7 @@
 <span class="interest-action">
         Explore what I watch ↗
        </span>
-</button>
-<button class="interest-card" data-modal="coding">
+</button><button class="interest-card" data-modal="coding">
 <span class="interest-icon">
         💻
        </span>
@@ -419,8 +343,7 @@
 <span class="interest-action">
         Explore my coding journey ↗
        </span>
-</button>
-<button class="interest-card" data-modal="programming">
+</button></div><div class="interest-grid interest-page" data-interest-page="2"><button class="interest-card" data-modal="programming">
 <span class="interest-icon">
         ⌘
        </span>
@@ -433,8 +356,7 @@
 <span class="interest-action">
         Explore programming ↗
        </span>
-</button>
-<button class="interest-card" data-modal="observing">
+</button><button class="interest-card" data-modal="observing">
 <span class="interest-icon">
         🔎
        </span>
@@ -447,8 +369,7 @@
 <span class="interest-action">
         Explore this interest ↗
        </span>
-</button>
-<button class="interest-card" data-modal="philosophy">
+</button></div><div class="interest-grid interest-page" data-interest-page="3"><button class="interest-card" data-modal="philosophy">
 <span class="interest-icon">
         ⚖️
        </span>
@@ -461,8 +382,7 @@
 <span class="interest-action">
         Explore my perspective ↗
        </span>
-</button>
-<button class="interest-card" data-modal="favorite-colors">
+</button><button class="interest-card" data-modal="favorite-colors">
 <span class="interest-icon">
         🎨
        </span>
@@ -475,8 +395,7 @@
 <span class="interest-action">
         Explore my favorite colors ↗
        </span>
-</button>
-<button class="interest-card" data-modal="favorite-genres">
+</button></div><div class="interest-grid interest-page" data-interest-page="4"><button class="interest-card" data-modal="favorite-genres">
 <span class="interest-icon">
         📖
        </span>
@@ -489,8 +408,7 @@
 <span class="interest-action">
         Explore my favorite book genres ↗
        </span>
-</button>
-<button class="interest-card" data-modal="networking">
+</button><button class="interest-card" data-modal="networking">
 <span class="interest-icon">
         🌐
        </span>
@@ -503,8 +421,7 @@
 <span class="interest-action">
         Explore networking ↗
        </span>
-</button>
-<button class="interest-card" data-modal="cybersecurity">
+</button></div><div class="interest-grid interest-page" data-interest-page="5"><button class="interest-card" data-modal="cybersecurity">
 <span class="interest-icon">
         🛡️
        </span>
@@ -517,8 +434,7 @@
 <span class="interest-action">
         Explore cybersecurity ↗
        </span>
-</button>
-</div>
+</button></div><div class="page-controls static-page-controls"><button class="page-btn" data-interest-prev="" disabled="" type="button">← Previous</button><span data-interest-count="">Page 1 of 6</span><button class="page-btn" data-interest-next="" type="button">Next →</button></div></div>
 <blockquote class="closing-quote">
       “I do not need to know everything today. I need to keep learning with purpose.”
      </blockquote>

@@ -688,3 +688,28 @@ body.home-screen .home-portrait-frame img {
   .site-nav .nav-icon{font-size:.72rem;width:11px;}
   .home-navigation{grid-template-columns:1fr;}
 }
+/* ABOUT ME Page 02 revision: static details and paged content */
+.about-static-profile,.about-static-facts{border:1px solid var(--line);background:var(--paper);padding:clamp(1.2rem,3vw,2rem)}
+.about-static-profile p{line-height:1.75;margin:.7rem 0;color:var(--muted)}
+.about-static-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.65rem}
+.static-fact{border:1px solid var(--line);background:#fff;padding:.85rem;display:flex;flex-direction:column;gap:.35rem}
+.static-fact span{font-size:.68rem;font-weight:700;letter-spacing:.09em;color:var(--muted)}
+.about-detail-static{cursor:default!important;min-height:68px!important;padding:.8rem 1rem!important}
+.about-detail-static:hover{transform:none!important;box-shadow:none!important}
+.pager-intro{line-height:1.7;color:var(--muted);margin:.2rem 0 1rem}
+.pager-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem}
+.pager-item{min-height:170px;justify-content:center}
+.page-controls{display:flex;align-items:center;justify-content:space-between;gap:.8rem;margin-top:1.25rem;padding-top:.9rem;border-top:1px solid var(--line);font-size:.82rem;color:var(--muted)}
+.page-btn{border:1px solid var(--green);background:transparent;color:var(--green);padding:.65rem 1rem;font:inherit;font-weight:700;cursor:pointer}
+.page-btn:hover:not(:disabled),.page-btn:focus-visible:not(:disabled){background:var(--green);color:#fff}
+.page-btn:disabled{opacity:.38;cursor:not-allowed}
+.education-pages{grid-template-columns:1fr 1fr!important}
+.education-pages .about-school-item{height:100%;align-items:start}
+.personality-page{min-height:300px;display:flex;flex-direction:column;justify-content:center}
+.personality-page h3{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,3vw,2.4rem);font-weight:500;color:var(--green);margin:.2rem 0 1rem;line-height:1.25}
+.personality-page h3 em{font-size:.72em}
+.personality-page p{line-height:1.8;color:var(--muted)}
+.static-stack{display:grid;gap:.7rem}.about-no-scroll{overflow:hidden!important}.about-no-scroll .static-stack{gap:.55rem}.about-no-scroll .resource-item{padding:.8rem 1rem}
+@media(max-width:650px){.about-static-facts,.pager-grid,.education-pages{grid-template-columns:1fr!important}.page-controls{flex-wrap:wrap}.page-controls span{order:-1;width:100%;text-align:center}}
+/* About Me Page 02 revision */
+.about-pager-page,.interest-page{display:none}.about-pager-page.is-active,.interest-page.is-active{display:block}.plain-facts{display:grid;gap:1rem}.plain-facts p{margin:0;padding:.8rem 0;border-bottom:1px solid rgba(255,255,255,.12);display:grid;gap:.3rem}.plain-facts strong{font-size:.72rem;letter-spacing:.12em}.plain-facts span{line-height:1.55}.static-page-controls{margin-top:1.5rem}.interest-pager .interest-grid{margin-top:1rem}
