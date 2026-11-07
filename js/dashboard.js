@@ -116,6 +116,7 @@
   const init=()=>{
     setupPager('[data-static-pager]','[data-pager-page]','[data-static-prev]','[data-static-next]','[data-static-count]');
     setupPager('[data-interest-pager]','[data-interest-page]','[data-interest-prev]','[data-interest-next]','[data-interest-count]');
+    setupPager('[data-personality-pager]','[data-personality-page]','[data-personality-prev]','[data-personality-next]','[data-personality-count]');
   };
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init,{once:true}); else init();
 })();
