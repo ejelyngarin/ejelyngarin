@@ -29,12 +29,87 @@ main{min-height:0;position:relative}.page{height:100%;display:grid;gap:22px;alig
 .image-viewer .zoom-close{position:absolute;right:24px;top:24px;z-index:2}
 .zoom-hint{font-family:'DM Mono',monospace;font-size:.68rem;color:#aaa;margin-top:8px}
 @media(max-width:850px){.gallery img{max-height:65vh}.tribute-photo img{max-height:65vh}.image-viewer{padding:12px}.image-viewer img{max-width:96vw;max-height:88vh}}
-.tribute-grid.text-only {
-    display: block;
-    width: 100%;
-}
 
+
+/* ===== FINAL PHOTO & TRIBUTE FIXES =====
+   Keep original colors and aspect ratios. Images are never cropped. */
+img { filter: none !important; }
+.hero-photo img,
+.timeline-item img,
+.gallery img,
+.tribute-photo img {
+  filter: none !important;
+}
+.timeline-item img,
+.gallery img,
+.tribute-photo img {
+  object-fit: contain !important;
+}
+.gallery {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  align-items: start;
+}
+.gallery figure {
+  cursor: zoom-in;
+}
+.gallery img {
+  width: 100%;
+  height: auto !important;
+  max-height: 58vh;
+  display: block;
+  background: #fff;
+  cursor: zoom-in;
+}
+.tribute-photo {
+  min-height: 0;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tribute-photo img {
+  width: 100%;
+  height: auto;
+  max-height: 58vh;
+  display: block;
+  cursor: zoom-in;
+}
+/* Mother tribute has text only—no empty second column. */
+.tribute-grid.text-only {
+  grid-template-columns: minmax(0, 1fr);
+}
 .tribute-grid.text-only > div {
-    width: 100%;
-    max-width: 100%;
+  width: 100%;
+  max-width: 100%;
+}
+.image-viewer {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: none;
+  place-items: center;
+  padding: 24px;
+  background: rgba(0, 0, 0, .94);
+  cursor: zoom-out;
+}
+.image-viewer.open { display: grid; }
+.image-viewer img {
+  width: auto;
+  height: auto;
+  max-width: 94vw;
+  max-height: 88vh;
+  object-fit: contain;
+  display: block;
+  filter: none !important;
+}
+.image-viewer .zoom-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 2;
+}
+@media (max-width: 850px) {
+  .gallery img, .tribute-photo img { max-height: 65vh; }
+  .image-viewer { padding: 12px; }
+  .image-viewer img { max-width: 96vw; max-height: 88vh; }
 }
