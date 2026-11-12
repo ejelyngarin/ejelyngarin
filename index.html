@@ -1,122 +1,61 @@
 <!doctype html>
-<!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width,initial-scale=1" name="viewport"/>
-  <title>
-   JEN — Personal Portfolio
-  </title>
-  <link href="css/style.css" rel="stylesheet"/>
- </head>
- <body>
-  <div class="site">
-   <header class="nav">
-    <div class="brand">
-     JEN / Personal Portfolio
-    </div>
-    <nav class="navlinks">
-     <a class="active" href="index.html">
-      ⌂ HOME
-     </a>
-     <a href="personal.html">
-      ◉ PERSONAL INFORMATION
-     </a>
-     <a href="achievements.html">
-      ✦ ACHIEVEMENTS
-     </a>
-     <a href="parents.html">
-      ♡ PARENTS
-     </a>
-    </nav>
-   </header>
-   <main class="page home">
-    <section class="hero-copy">
-     <div class="eyebrow">
-      Personal Portfolio · 2026
-     </div>
-     <h1 class="display">
-      Ejelyn
-      <br/>
-      C. Garin.
-     </h1>
-     <p class="copy">
-      A curious learner, an aspiring IT professional, and a work in progress — always finding new ways to learn, grow, and serve.
-     </p>
-     <div class="tag">
-      “Use Knowledge to Serve.”
-     </div>
-     <div class="quote">
-      Still dreaming. Still learning. Still becoming.
-     </div>
-     <div class="route-grid">
-      <a class="route-card" href="personal.html">
-       <div>
-        <span class="eyebrow">
-         01 · Get to know me
-        </span>
-        <h3>
-         Personal Information
-        </h3>
-        <p>
-         My story, values &amp; goals
-        </p>
-       </div>
-       <span class="arrow">
-        ↗
-       </span>
-      </a>
-      <a class="route-card" href="achievements.html">
-       <div>
-        <span class="eyebrow">
-         02 · Milestones
-        </span>
-        <h3>
-         Achievements
-        </h3>
-        <p>
-         Recognition &amp; experiences
-        </p>
-       </div>
-       <span class="arrow">
-        ↗
-       </span>
-      </a>
-      <a class="route-card" href="parents.html">
-       <div>
-        <span class="eyebrow">
-         03 · My Foundation
-        </span>
-        <h3>
-         Parents
-        </h3>
-        <p>
-         Family, love &amp; gratitude
-        </p>
-       </div>
-       <span class="arrow">
-        ↗
-       </span>
-      </a>
-     </div>
-    </section>
-    <aside class="hero-photo">
-     <img alt="Portrait of Ejelyn Garin" src="assets/images/profile.png"/>
-     <div class="photo-caption">
-      LOOKING AHEAD — Moving forward with curiosity, growth, and purpose.
-     </div>
-    </aside>
-   </main>
-   <footer class="footer">
-    <span>
-     EXPLORE MY JOURNEY ↗
-    </span>
-    <span class="motto">
-     Still Learning. Still Becoming.
-    </span>
-   </footer>
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#070709">
+<meta name="description" content="Ejelyn Cudal Garin — a journey of becoming.">
+<title>Home · JEN.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+<div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="JEN home"><img src="assets/images/logo.jpeg" alt="JEN official logo"></a>
+  <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  <nav class="main-nav" aria-label="Main navigation">
+    <a href="index.html" data-page="home"><span>⌂</span> HOME</a>
+    <a href="personal-information.html" data-page="personal"><span>✧</span> PERSONAL INFORMATION</a>
+    <a href="achievements.html" data-page="achievements"><span>◇</span> ACHIEVEMENTS</a>
+    <a href="family-friends.html" data-page="family"><span>♡</span> FAMILY &amp; FRIENDS</a>
+  </nav>
+</header>
+<main class="page-wrap">
+<section class="hero-grid">
+  <div class="hero-copy">
+    <p class="eyebrow">PERSONAL PORTFOLIO <i>·</i> 2026</p>
+    <p class="overline">A JOURNEY OF BECOMING</p>
+    <h1 class="gold-shimmer">Ejelyn<br><em>C. Garin.</em></h1>
+    <p class="hero-intro">A curious learner, an aspiring IT professional, and a work in progress — always finding new ways to learn, grow, and serve.</p>
+    <p class="gold-quote">“Use Knowledge to Serve.”</p>
+    <p class="motto">Still dreaming. Still learning. Still becoming.</p>
+    <a class="gold-button" href="personal-information.html">EXPLORE MY JOURNEY <span>↗</span></a>
   </div>
-  <script src="js/script.js">
-  </script>
- </body>
-</html>
+  <div class="hero-portrait">
+    <div class="portrait-frame"><img src="assets/images/profile.png" alt="Portrait of Ejelyn Cudal Garin"></div>
+    <span class="portrait-index">01 / THE BEGINNING</span>
+    <span class="orbit orbit-a"></span><span class="orbit orbit-b"></span>
+  </div>
+</section>
+<section class="home-cards">
+  <a class="feature-card" href="personal-information.html"><span class="card-no">01 · GET TO KNOW ME</span><strong>Personal<br>Information</strong><small>My story, values &amp; goals</small><b>↗</b></a>
+  <a class="feature-card" href="achievements.html"><span class="card-no">02 · MILESTONES</span><strong>Achievements</strong><small>Recognition &amp; experiences</small><b>↗</b></a>
+  <a class="feature-card" href="family-friends.html"><span class="card-no">03 · MY FOUNDATION</span><strong>Family &amp;<br>Friends</strong><small>Family, love &amp; gratitude</small><b>↗</b></a>
+</section>
+<section class="looking-ahead"><div><span class="eyebrow">LOOKING AHEAD</span><h2>Still learning.<br><em>Still becoming.</em></h2></div><p>Moving forward with curiosity, growth, and purpose.</p></section>
+</main>
+<div class="page-navigation"><span></span><a class="page-step next" href="personal-information.html">NEXT →</a></div>
+<footer class="site-footer">
+  <span>JEN. · A JOURNEY OF BECOMING</span>
+  <span>“Use Knowledge to Serve.”</span>
+</footer>
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox-close" aria-label="Close image viewer">×</button>
+  <button class="lightbox-prev" aria-label="Previous image">‹</button>
+  <figure><img src="" alt=""><figcaption></figcaption></figure>
+  <button class="lightbox-next" aria-label="Next image">›</button>
+</div>
+<script src="js/content.js"></script><script src="js/script.js"></script>
+</body></html>
