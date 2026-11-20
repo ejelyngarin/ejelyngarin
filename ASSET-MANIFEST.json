@@ -114,10 +114,10 @@
     "format": "JPEG"
   },
   {
-    "file": "logo.jpeg",
-    "width": 1024,
-    "height": 1024,
-    "format": "JPEG"
+    "file": "logo.png",
+    "width": 1254,
+    "height": 1254,
+    "format": "PNG"
   },
   {
     "file": "lyceum-northwestern-logo.jpg",
@@ -144,10 +144,10 @@
     "format": "JPEG"
   },
   {
-    "file": "profile.png",
-    "width": 1254,
-    "height": 1254,
-    "format": "PNG"
+    "file": "profile.jpg",
+    "width": 1086,
+    "height": 1448,
+    "format": "JPEG"
   },
   {
     "file": "san-pedro-elementary-logo.jpg",

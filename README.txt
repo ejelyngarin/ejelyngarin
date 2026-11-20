@@ -1,39 +1,56 @@
-EJELYN CUDAL GARIN — PERSONAL PORTFOLIO
-========================================
+EJELYN CUDAL GARIN — LUXURY PERSONAL PORTFOLIO
+================================================
 
-WHAT'S INCLUDED
-- Four separate HTML pages: Home, Personal Information, Achievements, Family & Friends.
-- Responsive black-and-gold luxury styling.
-- Clickable section tabs on Personal Information, beginning with the complete personal-details section and ending with Past · Present · Future.
-- Official logo image in the navigation and a clickable, zoomable identity-logo viewer with its caption.
-- Complete personal details from the supplied information document.
-- Expanded academic honors list including elementary grades Kinder through Grade 5.
-- Click-to-open achievement categories and photo galleries.
-- Click-to-open family/friends collections and full tribute letters.
-- Image lightbox with previous/next controls and keyboard navigation.
-- All 29 image assets from the corrected archive `achievement-family&friends.zip`.
-- Original image files are preserved. Galleries use `object-fit: contain` and do not force-crop photos.
+DESIGN
+- Professional luxury theme in midnight navy blue with champagne-gold highlights.
+- Refined Cormorant Garamond and DM Sans typography.
+- Subtle gold shimmer, illuminated borders, and smooth hover transitions.
+- Fixed-view layout: page content is navigated through separate pages, cards, popups, and pagination. There are no page or modal scrollbars.
+
+PAGES
+- index.html — Home
+- personal-information.html — About Me
+- achievements.html — Achievements
+- family-friends.html — Family & Friends
+
+INTERACTIONS
+- Clickable About Me topic cards open same-page detail popups.
+- Long About Me sections use multiple popup pages when needed.
+- Achievement categories open same-page photo galleries.
+- Family and friends collections open photo galleries with short appreciation messages.
+- Click a photo to open the image viewer. Click the image to zoom; use previous/next arrows to browse.
+- Letters & Tributes opens seven original letters. Each letter is split into pages with Previous and Next controls.
+- Escape closes the active popup or image viewer. Arrow keys navigate image sets and popup pages.
+
+ASSETS
+- The assets/images folder contains the 29 image files from the supplied photos2.zip archive.
+- Original photographs are displayed with object-fit: contain in galleries and the zoom viewer, preserving their aspect ratios.
 
 HOW TO VIEW
-1. Extract this ZIP.
-2. Open `index.html` in a modern browser.
-3. For a local development server, open the folder in VS Code and use Live Server.
+1. Extract the ZIP file.
+2. Open index.html in a modern browser.
+3. For local development, open the folder in VS Code and use Live Server.
 
 PUBLISHING
-Upload the contents of this folder to your static hosting provider. Keep the folder structure:
+Upload the contents of this folder to your static hosting provider. Keep the folder structure intact:
 - index.html
 - personal-information.html
 - achievements.html
 - family-friends.html
-- css/
-- js/
+- css/style.css
+- js/content.js
+- js/script.js
 - assets/images/
 
-CONTENT & PRIVACY NOTES
-- The supplied document was used as the content guide.
-- The document contains conflicting MBTI labels (`INFG` and `INFJ`); the profile uses INFJ because the source explicitly names “INFJ – The Advocate” and supplies an INFJ description.
-- The educational timeline uses the wording “BSIT, Major in Networking and Security” as stated in that timeline. The narrative elsewhere also refers to Networking and Cybersecurity.
-- Personal details requested from the supplied document are included in the Personal Information page; review the public contact and personal details before publishing.
-- Google Fonts are loaded online; fallback fonts are provided if the connection is unavailable.
+CONTENT NOTE
+The existing personal information, educational history, achievements, family/friends content, and seven original letters were retained from the supplied portfolio. Review personal details and contact information before publishing publicly.
 
-All photos remain in their supplied aspect ratio. No source photo was intentionally cropped or edited.
+
+LATEST REVISION
+- Logo and full-body profile are clickable and open in a full-image zoom viewer.
+- Personal Information replaces About Me in page navigation and heading.
+- Personal details use highlighted information cards.
+- Home page spacing and card widths are refined.
+- All pages include bottom Previous / Next navigation.
+- Full-body portrait uses contain sizing to preserve its original aspect ratio.
+- The home-page name has an animated luxury gold glow / flare effect.
