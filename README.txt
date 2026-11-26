@@ -1,34 +1,36 @@
 EJELYN C. GARIN — BLACK & GOLD LUXURY PROFESSIONAL PORTFOLIO
 ===========================================================
 
-PAGES
-- index.html — Home
-- personal-information.html — Personal Information
-- achievements.html — Achievements
-- family-friends.html — Family & Friends
+WEBSITE PAGES
+- index.html — HOME
+- personal-information.html — PERSONAL INFORMATION
+- achievements.html — ACHIEVEMENTS
+- family-friends.html — FAMILY & FRIENDS
 
 DESIGN
-- Obsidian black background with metallic gold accents.
-- Cinzel headings and Montserrat body typography.
-- Separate page navigation, premium highlights, and responsive layouts.
+- Deep obsidian background with metallic gold accents.
+- Cinzel-style headings and Montserrat-style body typography.
+- Responsive layouts, refined highlights, and restrained transitions.
 
 INTERACTIONS
-- Clickable profile and logo images with full-image viewer and zoom.
-- Personal Information topic cards open detail panels.
-- Technical Skills & Interests is nested inside section 05 only.
-- Achievement categories open their own photo galleries.
-- Family and friends collections open interactive galleries.
-- Four retained letters: Mother, Father, Big Sister, and Friends.
-- Modal pages and image galleries support previous/next controls.
+- Four distinct pages with clickable navigation and Previous/Next controls.
+- Clickable profile portrait and official JEN. logo with a full-image viewer.
+- Personal Information topic cards open their corresponding detail panels.
+- Technical Skills & Interests is available only through section 05 — Skills & Interests → OPEN DETAILS.
+- Achievement categories open their matching photo collections; academic and leadership records are also available.
+- Family and friends collections open galleries, and the four approved tribute letters are included.
+- Photo viewers and content modals include close controls and navigation where applicable.
 
-PHOTOS
-All image assets are sourced exclusively from the latest GOLD PHOTO.zip.
-Removed grandparents and younger-self image/letter material is not included.
-Images preserve their original proportions in the image viewer.
+PHOTOS & CONTENT
+- The image assets in this archive are the supplied approved photo set used by this build.
+- Grandparents' content and the younger-self letter are excluded from Family & Friends.
+- Image proportions are preserved; images can be opened in a larger view.
+- Personal, academic, achievement, and tribute content is based on the supplied Final Portfolio Information.
 
-OPEN
-1. Extract this ZIP.
-2. Double-click OPEN PORTFOLIO IN CHROME.bat.
-3. The portfolio opens in Google Chrome.
+OPEN ON WINDOWS
+1. Extract the ZIP archive.
+2. Open the extracted folder and double-click OPEN PORTFOLIO IN CHROME.bat.
+3. The launcher checks common Chrome installation locations and falls back to your default browser if Chrome is unavailable.
+4. You can also open index.html manually in any modern browser.
 
-The Google Fonts connection is used for typography; system fallbacks remain available offline.
+The site is self-contained and does not require a build step or server. Google Fonts are requested when internet access is available; system font fallbacks remain available offline.
